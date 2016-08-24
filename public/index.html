@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>SimpliciTea's FCC API Basejump:</title>
+		<title>SimpliciTea's FCC API Basejump: Image Search Abstraction Layer</title>
 
 		<link href="//fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet" type="text/css">
 		<link href="//fonts.googleapis.com/css?family=Source+Code+Pro:400" rel="stylesheet" type="text/css">
@@ -14,22 +14,32 @@
 			<a href="http://www.freecodecamp.com/">
 				<img id="fcc-logo" src="/public/img/fcc-icon.jpg" align="center">
 			</a>
-			<h1>API Basejump:</h1>
-			<a id="git-link" href="">
+			<h1>API Basejump: Image Search Abstraction Layer</h1>
+			<a id="git-link" href="https://github.com/SimpliciTea/fcc-image-search-api">
 				<p><img id="git-icon" src="/public/img/github_32px.png"> GitHub</p>
 			</a>
-			<p class="clearfix">Hi there! This is my implementation of <a href="http://www.freecodecamp.com/">FreeCodeCamp's</a> API Basejump ''.</p>
+			<p class="clearfix">Hi there! This is my implementation of <a href="http://www.freecodecamp.com/">FreeCodeCamp's</a> API Basejump 'Image Search Abstraction Layer'. This project utilizes a Google Custom Search Engine instance, Node.JS, Express, and MongoDB.</p>
 			<aside id="user-stories">
 				<p>User Stories:
-
+					<ol>
+						<li>I can get the image URLs, alt text and page urls for a set of images relating to a given search string.</li>
+						<li>I can paginate through the responses by adding a ?offset=2 parameter to the URL.</li>
+						<li>I can get a list of the most recently submitted search strings.</li>
+					</ol>
 				</p>
 			</aside>
 			
-			<h2>Example usage:</h2>
-			<code class="example-usage"></code>
+			<h2>Example query usage:</h2>
+			<code class="example-usage">/query/?q=grumpycat</code>
 			
-			<h2>Example output:</h2>
-			<code></code>
+			<h2>Example query output:</h2>
+			<code>[{"url":"https://api.grumpycats.com/images/fcfe1d656d3d305649a7ab4a0a9119e304a89a17/aHR0cCUzQSUyRiUyRmJldGFsbGljLmNvbSUyRnRodW1icyUyRjI4MHgyODAlMkZwYWdlaW1hZ2VzJTJGRVZfMjAxNiUyRjM1MjYwX0dydW1weVBhcnR5RmFjZS5lcHM%3D","snippet":"Grumpy Cat® Party Face","thumbnail":"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQGnkAAmg0ttIzhGw9S8bI7AfBI1duo9v6HvMfoDuyO1NYXbOK2cfjhPeI","context":"https://www.grumpycats.com/"},{"url":"http://i1.kym-cdn.com/photos/images/masonry/000/961/263/80e.jpg","snippet":"Grumpy Cat","thumbnail":"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTnRsWu2keK2LOm6FwU-pR_v-ejHZA29uZkW6ev2eTETMhwu5ZBO0oJzQ","context": .....</code>
+		
+			<h2>Examply history usage:</h2>
+			<code class="example-usage">/history/</code>
+
+			<h2>Example history output:</h2>
+			<code>[{"term":"grumpycat","when":"2016-08-24T21:16:14.035Z"},{"term":"bird","when":"2016-08-24T21:08:35.072Z"}]</code>
 		</div>
 
 		<script src="/common/ajax-functions.js" type="text/javascript"></script>

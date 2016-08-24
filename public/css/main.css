@@ -66,4 +66,5 @@ code {
     font-family: 'Source Code Pro', monospace;
     font-size: .8em;
     color: #d84d3b;
+    word-wrap: break-word;
 }
