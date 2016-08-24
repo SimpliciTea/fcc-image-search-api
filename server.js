@@ -1,9 +1,13 @@
 'use strict';
 
 var express = require('express'),
-	routes = require('./app/routes/index.js');
+	routes = require('./app/routes/index.js'),
+	mongoose = require('mongoose');
 
 var app = express();
+
+var uri = process.env.MONGODB_URI || 'mongodb://localhost:27017/queries';
+mongoose.connect(uri);
 
 app.use('/controllers', express.static(process.cwd() + '/app/controllers'));
 app.use('/public', express.static(process.cwd() + '/public'));
