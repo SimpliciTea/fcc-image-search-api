@@ -10,7 +10,6 @@ var Query = new Schema(
 	'when': {type: Date, default: Date.now }
 }, {
 	versionKey: false,
-	_id: false
 });
 
 module.exports = mongoose.model('Query', Query);
